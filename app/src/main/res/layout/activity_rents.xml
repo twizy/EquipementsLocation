@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Rents">
+
+    <include
+        android:id="@+id/rents_toolbar"
+        layout="@layout/tool_bar_layout"/>
+
+    <ScrollView
+        android:id="@+id/id_scrowview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rents_toolbar"
+        android:layout_centerInParent="true">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/card_0"
+            app:cardBackgroundColor="@color/cardcolorbg"
+            app:cardCornerRadius="25dp">
+
+            <LinearLayout android:orientation="vertical"
+                android:id="@+id/agent_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:textSize="24dp"
+                    android:gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Identification du client"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <EditText
+                    android:textSize="24dp"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/id_client_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="* Nom du client"/>
+
+                <EditText
+                    android:textSize="24dp"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/id_client_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="* Numéro de téléphone"/>
+
+                <EditText
+                    android:textSize="24dp"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/id_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:hint="* Montant payé"
+                    android:inputType="numberDecimal"/>
+
+                <Spinner
+                    android:id="@+id/id_planets_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <EditText
+                    android:id="@+id/id_conversion"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="* Conversion total"
+                    android:textSize="24sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+
+</RelativeLayout>
