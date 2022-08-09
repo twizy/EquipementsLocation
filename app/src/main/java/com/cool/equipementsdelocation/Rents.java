@@ -98,7 +98,6 @@ public class Rents extends AppCompatActivity {
             public void onResponse(Response response) throws IOException {
                 final String mMessage = response.body().string();
 
-
                 Rents.this.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
