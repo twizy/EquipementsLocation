@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EquipementsDeLocation">
         <activity
-            android:name=".Rents"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Rents"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

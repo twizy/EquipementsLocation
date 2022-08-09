@@ -165,7 +165,6 @@ public class Rents extends AppCompatActivity {
 
                             double output = euroVlaue*Double.valueOf(val);
 
-
                             conversion_edt.setText(String.valueOf(output));
 
                         } catch (JSONException e) {
