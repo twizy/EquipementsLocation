@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -31,6 +32,7 @@ public class Rents extends AppCompatActivity {
     public List<String> keysList;
     public EditText client_name_edt, client_contact_edt, amount_edt, conversion_edt;
     public Spinner planets_spinner;
+    public Button exc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,7 @@ public class Rents extends AppCompatActivity {
         amount_edt = (EditText) findViewById(R.id.id_amount);
         conversion_edt = (EditText) findViewById(R.id.id_conversion);
         planets_spinner = (Spinner) findViewById(R.id.id_planets_spinner);
+        exc = (Button) findViewById(R.id.id_exchane);
 
         try {
             loadConvTypes();
@@ -49,10 +52,9 @@ public class Rents extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        planets_spinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        exc.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
+            public void onClick(View view) {
                 if(!amount_edt.getText().toString().isEmpty())
                 {
                     String toCurr = planets_spinner.getSelectedItem().toString();
@@ -70,9 +72,9 @@ public class Rents extends AppCompatActivity {
                 {
                     Toast.makeText(Rents.this, "Please Enter a Value to Convert..", Toast.LENGTH_SHORT).show();
                 }
-
             }
         });
+
     }
 
     public void loadConvTypes() throws IOException {
